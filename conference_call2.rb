@@ -1,8 +1,12 @@
 class ConferenceCall
-	attr_reader :conference_id
+	attr_reader :id
 	
-	def initialize(id)
-		@conference_id = conference_id
+	def initialize
+		@conference_id
+	end
+
+	def id
+		@conference_id = rand(100)
 	end
 	
 
@@ -11,7 +15,6 @@ class ConferenceCall
 		
 		def initialize(name)
 			@name = name
-			
 
 			#if defined?(@@total_participants)
 			#	@@total_participants += 1
@@ -30,8 +33,8 @@ class ConferenceCall
 
 end
 
-conference_1 = ConferenceCall.new("001")
-puts conference_1.conference_id
+conference_1 = ConferenceCall.new#("001")
+puts conference_1.id
 
 participant_1 = ConferenceCall::Participant.new("Mike")
 puts participant_1.name
