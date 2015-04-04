@@ -10,9 +10,6 @@ class ConferenceCall
     	@participants.count
   	end
 
-  	def add_participant(participant)
-  		@participants << participant
-  	end
 
 	#def id
 	#	@conference_id = rand(100)
@@ -32,7 +29,7 @@ class Participant
 		end
 
 		def join_conference_call(conference_call)
-			conference_call.add_participant(self)
+			conference_call.participants << self
 		end
 end
 
